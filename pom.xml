@@ -65,11 +65,10 @@
                         <phase>generate-sources</phase>
                         <configuration>
                             <sourceRoot>${project.build.directory}/generated-sources/cxf</sourceRoot>
-                            <wsdlOptions>
-                                <wsdlOption>
-                                    <wsdl>${project.basedir}/src/main/resources/wsdl/holidayservice.wsdl</wsdl>
-                                </wsdlOption>
-                            </wsdlOptions>
+                            <wsdlRoot>${project.basedir}/src/main/resources/wsdl</wsdlRoot>
+                            <includes>
+                                <include>*.wsdl</include>
+                            </includes>
                         </configuration>
                         <goals>
                             <goal>wsdl2java</goal>
